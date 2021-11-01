@@ -12,6 +12,20 @@ The data is in the data directory and should be extracted before any code is exe
 
 All our code is in the scripts directory.
 
+## Notebooks
+
+Simulation_ridge.ipynb : 
+
+cross_validation_raw.ipynb : 
+
+crossforRidge.ipynb : 
+
+data_exploration.ipynb : 
+
+project1.ipynb : 
+
+##Python Scripts
+
 run.py : code that outputs our best prediction
 
 implementations.py : our implementation of the 6 ML methods.
@@ -20,7 +34,14 @@ plots.py : cross validation plot
 
 proj1_helpers.py : helper functions (create output csv, calculate accuracy of a model, load the data and others)  
 
-
 cross_validation_ridge_raw.py : cross validation using ridge regression without processing data
+
+costs.py : 
+
+process.py : 
+
+process_data_exploration.py : 
+
+
 
 
