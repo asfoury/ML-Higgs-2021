@@ -22,7 +22,7 @@ crossforRidge.ipynb :
 
 data_exploration.ipynb : This notebook shows the code that we used to get more insight over the given data. It Also showcases the code we used to generate some graphs (Number of missing values by Jet number, accuracies of multiple feature expansion techniques).
 
-project1.ipynb : 
+project1.ipynb : This notebook contains the first accuracies we obtained using the 6 ML methods without processing the data.
 
 ### Python Files
 
