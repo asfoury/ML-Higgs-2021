@@ -16,7 +16,7 @@ All our code is in the scripts directory.
 
 Simulation_ridge.ipynb : 
 
-cross_validation_raw.ipynb : 
+cross_validation_raw.ipynb : This notebook contains the cross validation to find lambda for reg logistic regression using the raw data
 
 crossforRidge.ipynb : 
 
