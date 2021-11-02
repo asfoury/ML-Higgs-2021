@@ -14,15 +14,15 @@ All our code is in the scripts directory.
 
 ### Notebooks
 
-Simulation_ridge.ipynb : 
+Simulation_ridge.ipynb : Notebook to run (Processing+training) for ridge regression (that gave us the best accuracy result).
 
-cross_validation_raw.ipynb : 
+cross_validation_raw.ipynb : This notebook contains the cross validation to find lambda for reg logistic regression using the raw data
 
-crossforRidge.ipynb : 
+crossforRidge.ipynb : Notebook showing cross validation to find the best parameter lambda for ridge regression for each partition according to the accuracy. We also test for several values of degree for the polynomial expansion.
 
 data_exploration.ipynb : This notebook shows the code that we used to get more insight over the given data. It Also showcases the code we used to generate some graphs (Number of missing values by Jet number, accuracies of multiple feature expansion techniques).
 
-project1.ipynb : 
+project1.ipynb : This notebook contains the first accuracies we obtained using the 6 ML methods without processing the data.
 
 ### Python Files
 

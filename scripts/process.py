@@ -7,7 +7,8 @@ from proj1_helpers import *
 from implementations import *
 from costs import *
 
-
+#Filter DataSet on given jet_num value 
+#Returns new sets
 def filter_on_jet(y,x,jet_num):
     mask = x[:,22]== jet_num
     x_jet= x[mask]
@@ -37,17 +38,15 @@ def clean(tX):
         col[col > 167] = avg
     return tX
 
+#apply polunomial expansion
 def build_poly(x, degree):
-    """polynomial basis functions for input data x, for j=0 up to j=degree."""
+    """polynomial basis functions for input data x"""
     poly = np.ones((len(x), 1))
     for deg in range(1, degree+1):
         poly = np.c_[poly, np.power(x, deg)]
     return poly
 
-
-
-
-
+#Standardize given matrix tX on columns 
 def standardize(tX):
     for feature in range(tX.shape[1]):
         col = tX[:, feature]
@@ -55,9 +54,36 @@ def standardize(tX):
         
     return tX
 
-
+ 
 def add_column_ones(x):
-    return np.hstack([np.expand_dims(np.ones(x.shape[0]), axis=1),x])      
+    return np.hstack([np.expand_dims(np.ones(x.shape[0]), axis=1),x])     
+
+# return corresponding mask according to jet_num 
+def masks(X_tr,X_te,jet_num):
+    if (jet_num == 0):
+        return (X_tr[:, 22] == jet_num), (X_te[:, 22] == jet_num)
+    elif (jet_num == 1):
+        return (X_tr[:, 22] == jet_num), (X_te[:, 22] == jet_num)
+    elif (jet_num == 2):
+        return (X_tr[:, 22] == jet_num), (X_te[:, 22] == jet_num)
+    elif (jet_num == 3):
+        return (X_tr[:, 22] == jet_num), (X_te[:, 22] == jet_num)
+        
+    else :
+        print("invalid jet_num")
+        return   
+    
+# return corresponding mask according to jet_num, here merging dataSet with jet_num 2 and 3        
+def masks_2(X_tr,X_te,jet_num):
+    if (jet_num == 0):
+        return (X_tr[:, 22] == jet_num), (X_te[:, 22] == jet_num)
+    elif (jet_num == 1):
+        return (X_tr[:, 22] == jet_num), (X_te[:, 22] == jet_num)
+    elif np.logical_or(jet_num == 2,jet_num== 3 ):
+        return np.logical_or(X_tr[:, 22] == 2,X_tr[:, 22] == 3 ) , np.logical_or(X_te[:, 22] == 2,X_te[:, 22] == 3 ) 
+    else :
+        print("invalid jet_num")
+        return
 
 def process(x_tr, x_te, jet_num, features_to_discard, degree_opti, stan ):
     if jet_num in range(4):
